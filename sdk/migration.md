@@ -14,7 +14,7 @@ If you're currently calling the Partner API directly with `fetch`/`axios`/`node-
 | `GET /v1/campaign-config` | `pllay.campaigns.get()` |
 | `GET /v1/analytics` | `pllay.analytics.getCampaignSummary()` |
 | Manually verifying `X-Pllay-Signature` with `crypto.createHmac` | `pllay.webhooks.verify()` / `.constructEvent()` |
-| Hand-rolled retry-on-5xx loop | Built in — safe by default, see [getting-started.md](getting-started.md) |
+| Hand-rolled retry-on-5xx loop | Built in — safe by default, see [Client SDKs aren't published yet. Integrate today with the HTTP API and sandbox.](https://www.pllay.io/developers) |
 | Manually generating and tracking your own idempotency keys | Same concept, just pass `{ idempotencyKey }` — the SDK doesn't invent this, it exposes exactly what the API already supports |
 
 ### Before
@@ -42,7 +42,7 @@ const interaction = await pllay.interactions.create({
 });
 ```
 
-Error handling collapses from manually checking `res.ok` and parsing the error envelope to catching typed error classes — see [getting-started.md](getting-started.md#handling-errors).
+Error handling collapses from manually checking `res.ok` and parsing the error envelope to catching typed error classes — see [Client SDKs aren't published yet. Integrate today with the HTTP API and sandbox.](https://www.pllay.io/developers).
 
 ## SDK version migrations (future)
 
