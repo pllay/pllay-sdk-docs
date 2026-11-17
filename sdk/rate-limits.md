@@ -28,7 +28,7 @@ try {
 
 ## How the SDK's own retries interact with this
 
-You don't need to hand-roll backoff for transient rate limiting — the SDK already does the right thing, within the bounds of its [safe-retry rule](getting-started.md#handling-errors):
+You don't need to hand-roll backoff for transient rate limiting — the SDK already does the right thing, within the bounds of its [Client SDKs aren't published yet. Integrate today with the HTTP API and sandbox.](https://www.pllay.io/developers):
 
 - A **safe** call (any `GET`) that hits a `429` is retried automatically, honoring the server's `Retry-After` exactly (not the SDK's own jittered backoff — the server told you how long to wait, so that's what it waits).
 - An **unsafe** call (`create()`, `close()`, `submit()`) that hits a `429` is retried **only if you passed an `idempotencyKey`** — same rule as every other transient failure. Without one, it throws `PLLAYRateLimitError` immediately on the first `429`, exactly once, with no retry.

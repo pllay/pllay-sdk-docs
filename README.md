@@ -10,7 +10,7 @@ component.
 
 ## SDK
 
-- [Getting started](./sdk/getting-started.md)
+- [Client SDKs aren't published yet. Integrate today with the HTTP API and sandbox.](https://www.pllay.io/developers)
 - [Authentication](./sdk/authentication.md)
 - [Sandbox guide](./sdk/sandbox.md)
 - [API examples](./sdk/api-examples.md)
